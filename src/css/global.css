@@ -1,11 +1,15 @@
-@fontface {
-  font-family: 'Lato', sans-serif;
-  src: url('https://fonts.googleapis.com/css?family=Lato:300,400')
+* { 
+  margin: 0; 
+  padding: 0; 
 }
 
-* { margin: 0; padding: 0; }
 li { list-style: none; }
-a { text-decoration: none; }
+
+a { text-decoration: none; color:steelblue; }
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
 body { 
   font-size: 20px;
   background-color: #000;
@@ -13,4 +17,8 @@ body {
   font-weight: 300;
   color: #666;
 }  
+ul { 
+  display: flex;
+  justify-content: space-around;
+}
 

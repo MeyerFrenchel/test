@@ -14,7 +14,6 @@ import PlanetDetailsContainer from './containers/PlanetDetailsContainer';
 
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-//import logger from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -35,7 +34,6 @@ const store = createStore(
       promise(), 
       thunk, 
       router, 
-      //logger
     )
   )
 );

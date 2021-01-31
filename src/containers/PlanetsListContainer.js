@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Item from '../components/Item';
 
 import { fetchPlanets, selectPlanet } from '../actions/planetsActions';
-import { resourceEndpoint, format } from '../utils';
+import { resourceEndpoint} from '../utils';
 
 class PlanetsListContainer extends React.Component {
   componentWillMount() {
@@ -28,7 +28,6 @@ class PlanetsListContainer extends React.Component {
           {this.props.planets.map(p => (
             <li key={p.name}>
               <Item topText={p.name} 
-                    bottomText={`${format(p.population)} people`} 
                     onClickDetails={this.handleClickDetails.bind(this, p)}
               />
             </li>

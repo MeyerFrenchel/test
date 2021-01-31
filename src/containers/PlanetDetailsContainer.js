@@ -19,14 +19,15 @@ class PlanetDetailsContainer extends React.Component {
   }
   
   render() {
-    const { name, population, diameter, 
-            climate, gravity } = this.props.planet;
+    const { name, population,rotation_period, orbital_period, diameter, climate, gravity } = this.props.planet;
     return(
       <div>
         <Header title={name} />
         <Item topText="Population" bottomText={`${format(population)}`} />
         <Item topText="Diameter" bottomText={diameter} />
         <Item topText="Climate" bottomText={climate} />
+        <Item topText="Rotation-period" bottomText={rotation_period} />
+        <Item topText="Rotation-period" bottomText={orbital_period} />
         <Item topText="Gravity" bottomText={gravity} />
         
       </div>

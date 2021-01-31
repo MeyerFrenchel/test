@@ -28,7 +28,7 @@ class PeopleListContainer extends React.Component {
           {this.props.people.map(p => (
             <li key={p.name}>
               <Item topText={p.name} 
-                    bottomText={`${p.height} cm height`} 
+                    
                     onClickDetails={this.handleClickDetails.bind(this, p)}
               />
             </li>

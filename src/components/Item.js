@@ -12,7 +12,7 @@ export default class Item extends React.Component {
           <span>{bottomText}</span>
         </div>
         { hasDetails() &&
-          <a onClick={onClickDetails}>&gt;</a>
+          <a onClick={onClickDetails}>details</a>
         }
       </ItemContainer>
     )
@@ -20,11 +20,12 @@ export default class Item extends React.Component {
 }
 
 const ItemContainer = styled.div`
-  border-bottom: 1px solid #D4D4D4;
+  border: 1px solid yellow;
+
   background-color: #FFF;
   padding: 1em;
-  display: flex;
-  justify-content: space-between;
+
+  display: inline-block;
   a {
     cursor: pointer;
   }

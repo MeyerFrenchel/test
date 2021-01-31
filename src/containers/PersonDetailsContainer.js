@@ -1,11 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux'
-
-import { getPerson } from '../actions/peopleActions';
-import { getPlanet } from '../actions/planetsActions';
-import { resourceEndpoint } from '../utils';
-
 import Header from '../components/Header';
 import Item from '../components/Item';
 

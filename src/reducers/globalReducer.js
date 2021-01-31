@@ -3,7 +3,6 @@ export default function reducer(state = {
   planets: [],
   person: {},
   planet: {},
-  personFilms: [],
   nextPage: null,
   previousPage: null,
   fetched: false
@@ -15,8 +14,8 @@ export default function reducer(state = {
         ...state, 
         fetched: true, 
         people: action.payload.data.results,
-        nextPage: (action.payload.data.next !== null) ? action.payload.data.next.split('=')[2] : null,
-        previousPage: (action.payload.data.previous !== null) ? action.payload.data.previous.split('=')[2] : null
+        nextPage: (action.payload.data.next !== null) ? action.payload.data.next.split('=')[1] : null,
+        previousPage: (action.payload.data.previous !== null) ? action.payload.data.previous.split('=')[1] : null
       };
     }
 
@@ -25,8 +24,8 @@ export default function reducer(state = {
         ...state, 
         fetched: true, 
         planets: action.payload.data.results,
-        nextPage: (action.payload.data.next !== null) ? action.payload.data.next.split('=')[2] : null,
-        previousPage: (action.payload.data.previous !== null) ? action.payload.data.previous.split('=')[2] : null
+        nextPage: (action.payload.data.next !== null) ? action.payload.data.next.split('=')[1] : null,
+        previousPage: (action.payload.data.previous !== null) ? action.payload.data.previous.split('=')[1] : null
       };
     }
 
@@ -38,13 +37,7 @@ export default function reducer(state = {
       return {...state, fetched: true, planet: action.payload.data};
     }
 
-    case 'FETCH_FILMS': {
-      return {
-        ...state, 
-        films: action.payload.data.results,
-        personFilms: action.selectedFilms
-      };
-    }
+   
 
     case 'SELECT_PERSON': {
       return {

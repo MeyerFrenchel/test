@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 import Pagination from '../containers/PaginationContainer';
-import loading from '../images/loading.gif';
+
 
 class Header extends React.Component {
   
@@ -16,10 +16,9 @@ class Header extends React.Component {
       <HeaderContainer>
         <a onClick={history.goBack}>&lt;</a>
         <label>
-          {this.props.fetched?
-            <span>{title}</span> :
-            <img src={loading} alt="" />
-          }
+          
+            <span>{title}</span> 
+          
         </label>
         <Pagination />
       </HeaderContainer>

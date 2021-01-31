@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
+
 class PaginationContainer extends React.Component {
   render() {
     const { nextPage, previousPage } = this.props;
@@ -9,7 +10,9 @@ class PaginationContainer extends React.Component {
       <Pagination>
         {previousPage !== null && <a href={`?page=${previousPage}`}>&lt;</a>}
         {nextPage !== null && <a href={`?page=${nextPage}`}>&gt;</a>}
+        
       </Pagination>
+      
     )
   }
 }
